@@ -1,0 +1,27 @@
+# Default values for every application.
+# Each app overrides what it needs in apps/<name>/values.yaml
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: "1.27"
+  pullPolicy: IfNotPresent
+
+# Port the container listens on
+containerPort: 80
+
+service:
+  type: ClusterIP
+  port: 80
+
+# Environment variables, as a simple map: NAME: value
+env: {}
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 32Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
