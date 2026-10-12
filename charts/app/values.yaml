@@ -18,10 +18,12 @@ service:
 # Environment variables, as a simple map: NAME: value
 env: {}
 
-resources:
+defaultResources:
   requests:
     cpu: 10m
     memory: 32Mi
   limits:
     cpu: 100m
     memory: 128Mi
+
+resources: {}

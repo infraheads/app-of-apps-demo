@@ -28,5 +28,7 @@ spec:
               value: {{ $value | quote }}
             {{- end }}
           {{- end }}
+          {{- with (include "app.resources" .) }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- . | nindent 12 }}
+          {{- end }}

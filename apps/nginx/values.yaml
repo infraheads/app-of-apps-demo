@@ -6,3 +6,8 @@ containerPort: 80
 
 env:
   NGINX_ENTRYPOINT_QUIET_LOGS: "1"
+
+resources:
+  requests:
+    cpu: 29m
+    memory: 200Mi
